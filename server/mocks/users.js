@@ -4,7 +4,7 @@ module.exports = function(app) {
 
   usersRouter.get('/', function(req, res) {
     res.send({
-      'users': [{_id: "0", username:"alex", maps: []},{_id: "1", username:"chris", maps: []}]
+      'users': [{_id: "0", email:"alex@blacktowerentertainment.com", username:"alex", maps: ["1","2","3"]},{_id: "1", email:"chris.watts.t@gmail.com", username:"chris", maps: ["2","3"]}]
     });
   });
 

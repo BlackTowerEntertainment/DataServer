@@ -2,7 +2,8 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var app = new EmberApp({
+});
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
@@ -28,8 +29,6 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.w
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 // Moment
 app.import('bower_components/moment/moment.js');
-// MD5 checksum
-app.import('bower_components/JavaScript-MD5/js/md5.js');
 //Font awesome CSS
 app.import('bower_components/font-awesome/css/font-awesome.css');
 //Font awesome Fonts
@@ -37,5 +36,6 @@ app.import('bower_components/font-awesome/fonts/fontawesome-webfont.eot', {destD
 app.import('bower_components/font-awesome/fonts/fontawesome-webfont.ttf', {destDir: 'fonts'});
 app.import('bower_components/font-awesome/fonts/fontawesome-webfont.svg', {destDir: 'fonts'});
 app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff', {destDir: 'fonts'});
+app.import('bower_components/JavaScript-MD5/js/md5.js');
 
 module.exports = app.toTree();

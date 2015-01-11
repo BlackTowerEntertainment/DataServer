@@ -1,9 +1,18 @@
-<div class="col-md-10">
-    <div class="panel-heading">
-        <span class="text-capitalize">{{username}}</span>
-    </div>
-    <div class="panel-body">
-        Username: {{username}}
-        Maps: {{maps}}
+<div id="user-container" class="col-md-9">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {{user-object size=40 user=this}}
+        </div>
+        <div class="panel-body">
+            <div>Username: {{username}}</div>
+            <div>Maps</div>
+            <div class="map-list">
+                <ul >
+                    {{#each map in this.maps}}
+                        <li>{{#link-to 'map' map}}{{map}}{{/link-to}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
