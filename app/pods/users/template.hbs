@@ -1,1 +1,13 @@
-<div>Hello there users!</div> <div>{{outlet}}</div>
+<div class="row">
+    <h2>Users</h2>
+    <div class="col-md-2">
+        <div class="users-list">
+            <ul>
+                {{#each user in this}}
+                    <li>{{#link-to 'user' user}}{{user.username}}{{/link-to}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    {{outlet}}
+</div>
