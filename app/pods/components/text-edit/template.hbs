@@ -1,0 +1,6 @@
+{{#if editing}}
+    {{input value=text}}
+    <div class="btn btn-success" {{action "save" bubble=false}}><i class="fa fa-check"></i></div>
+{{else}}
+    {{text}}<div class="btn btn-primary" {{action "edit" bubble=false}}><i class="fa fa-edit"></i></div>
+{{/if}}
